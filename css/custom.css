@@ -23,6 +23,11 @@ label,
 
 }
 
+.glyphicon {
+    /* font-size: 25px; */
+    color: white
+}
+
 
 h2 {
     /* font-family: 'Shadows Into Light Two', cursive; */
