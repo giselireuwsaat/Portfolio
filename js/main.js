@@ -3,7 +3,7 @@ let sort = document.querySelector('#sorte');
 
 
 window.onscroll = function () {
-    if (window.pageYOffset > 60) {
+    if (window.pageYOffset > 10) {
         sort.style.background = 'rgb(216,216,216)'
         nav.style.background = 'rgb(216,216,216)'
         nav.style.height = '3em'
