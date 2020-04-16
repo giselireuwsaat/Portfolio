@@ -12,14 +12,18 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     /* font-weight: 300; */
     color: #858585;
+    font-size: 1.3vw;
+
 
 }
 
 p,
 label,
+h5,
 .linguagens-item .caption,
 .fa {
-    font-size: 3vw;
+    font-size: calc(16px + (18 - 16) * (100vw - 300px) / (1400 - 300));
+    /* font-size: 3vw; */
 
 }
 
@@ -28,10 +32,18 @@ label,
     color: white
 }
 
+h1 {
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 700;
+    font-size: 6vw;
+    color: #474a51;
+    text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+}
 
 h2 {
     /* font-family: 'Shadows Into Light Two', cursive; */
-    font-size: 3.3vw;
+    font-size: calc(16px + (35 - 16) * (100vw - 300px) / (1400 - 300));
+    /* font-size: 3.3vw; Colocando a fórmula de cima não precisa usar o @media*/
     color: #DAA520;
     /* margin-bottom: -14px; */
     text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
@@ -58,22 +70,15 @@ h4 {
     /* text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px; */
 }
 
-h1 {
-    /* font-family: 'Roboto', sans-serif; */
-    font-weight: 700;
-    font-size: 6vw;
-    color: #474a51;
-    text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
-
+h6 {
+    font-size: 19px;
+    text-align: center;
 
 }
 
-/* h5 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 2vw;
-    color: white;
-} */
+
+
+
 
 
 @media screen and (min-width: 601px) {
@@ -83,9 +88,10 @@ h1 {
         font-size: 4vw;
     }
 
-    h2 {
-        font-size: 2vw;
-    }
+    /* h2 {
+
+        font-size: 2.5vw; como coloquei a formula em cima, não precisou colocar o media
+    } */
 
     h3 {
         font-size: 2vw;
@@ -99,12 +105,14 @@ h1 {
         font-size: 3vw;
     }
 
-    p,
+
+
+    /* p,
     label,
     .linguagens-item .caption {
         font-size: 1.2vw;
 
-    }
+    } */
 
 
 
@@ -133,11 +141,13 @@ h1 {
     /* color: blue; */
     text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
 }
+
+
 @media only screen and (max-width: 766px) {
 
 
-    .navbar-collapse{
-        background-color:rgb(216,216,216);
+    .navbar-collapse {
+        background-color: rgb(216, 216, 216);
     }
 
 }
@@ -318,14 +328,14 @@ header img {
 /* CSS Quem somos */
 
 .cartao-container {
-    margin: 3px;
-    margin-right: 3em;
+    margin: 0px;
+    margin-right: 0em;
     /* width: 30%; */
     /* padding:1px; */
 }
 
 .img-area {
-    /* display: inline-block; */
+    display: inline-block;
     overflow: hidden;
     /* width: 100%; */
 }
@@ -359,33 +369,36 @@ header img {
     top: 0;
     left: 0;
     transform: rotateY(-180deg);
+    width: 100%;
+    /* height: 25%; */
+
+    font-size: calc(18px + (24 - 18) * (100vw - 400px) / (1326 - 400));
 }
+
+
 
 .frente,
 .costas {
     backface-visibility: hidden;
     transition: 1s;
     transform-style: preserve-3d;
-}
-
-.profile .pro-title {
-    font-weight: 700;
-    /* color: #040404; */
-    position: relative;
-    width: 150px;
-    display: inline-block;
-    margin-bottom: 5px;
 
 }
 
 .profile {
-    height: 23em;
+    padding-left: 10%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
+
+
+
 
 
 ol,
 ul {
-
     list-style: none;
 }
 
@@ -416,19 +429,21 @@ ul {
 
 .linguagens {
     background-color: rgb(216, 216, 216);
-    padding-left: 5em;
+    /* padding-left: 5em; */
 }
 
 .linguagens-item {
-    width: 15%;
+    width: 17%;
     /* position: relative; */
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0 0.5em;
 }
 
 .linguagens-item img {
     width: 100%;
 }
+
+
 
 /* .linguagens-item .caption {
     font-size: 1.5vw;
@@ -438,10 +453,10 @@ ul {
 
 
 /* CSS Portfolio */
-.h2-portfolio {
-    /* margin-left: 2em; */
-    /* padding: 1px; */
-}
+/* .h2-portfolio {
+    margin-left: 2em; 
+    padding: 1px;
+} */
 
 .trabalhos {
     padding: 1px;
@@ -452,12 +467,12 @@ ul {
     flex-wrap: wrap;
 }
 
-.trabalho-item {
+/* .trabalho-item {
     width: 354px;
     position: relative;
     display: inline-block;
     margin: 15px 0;
-}
+} */
 
 
 .trabalho-item img {
@@ -480,6 +495,7 @@ ul {
     color: white;
     text-align: center;
     top: 0;
+    padding-top: 15%;
 }
 
 .conteudo {
@@ -489,7 +505,10 @@ ul {
 /* CSS Contato */
 .contato {
     background-color: rgb(216, 216, 216);
+
 }
+
+
 
 @media (min-width: 1200px) {
     .container {
@@ -569,13 +588,13 @@ p .copyright {
         margin-left: 2em;
     } */
 
-    .linguagens-item {
-        width: 26%;
-    }
+    /* .linguagens-item {
+        width: 35%;
+    } */
 
-    .linguagens-item img {
+    /* .linguagens-item img {
         width: 100%;
-    }
+    } */
 
     /* .linguagens-item .caption {
         font-size: 2vw;
@@ -583,12 +602,6 @@ p .copyright {
 
 }
 
-
-
-body {
-    font-size: 1.3vw;
-
-}
 
 .navbar {
     /* position: relative; */
@@ -604,4 +617,25 @@ body {
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #DAA520;
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media (max-width: 620px) {
+    .linguagens-item {
+        width: 30%;
+        margin: 0 0.3em;
+    }
+}
+
+
+@media (max-width: 350px) {
+    .linguagens-item {
+        width: 45%;
+        margin: 0 0.3em;
+    }
 }
